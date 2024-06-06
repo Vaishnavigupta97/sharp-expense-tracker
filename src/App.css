@@ -1,38 +1,472 @@
-.App {
+.body {
+  background-color: white;
+  height: 100vh;
+}
+
+.theme_container {
+  text-align: right;
+  background-color: rgb(205, 205, 255);
+}
+
+.signup_container {
+  margin: auto;
+  margin-top: 75px;
+  width: 250px;
+  border: 2px solid rgb(4, 4, 41);
+  border-radius: 5px;
+  padding: 20px;
+}
+.su_heading {
+  color: rgb(4, 4, 41);
+  padding-bottom: 5px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgb(4, 4, 41);
+}
+
+.signup_container input {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.signup_container input:focus {
+  border-color: rgb(4, 4, 41);
+}
+
+.log_btn {
+  padding: 5px 10px 5px 10px;
+  border-color: rgb(4, 4, 41);
+  color: rgb(4, 4, 41);
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: rgb(205, 205, 255);
+  cursor: pointer;
+}
+
+.forget_btn {
+  border: 0px solid white;
+  background-color: white;
+  cursor: pointer;
+}
+
+.forget_div {
+  padding-left: 20px;
+}
+
+.header_container {
+  background-color: rgb(4, 4, 41);
+  color: white;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.header_name {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.logo {
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid white;
+  padding: 5px 10px 5px 10px;
+  width: 115px;
+}
+.header_btn {
+  margin-left: 20px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(4, 4, 41);
+  cursor: pointer;
+  background-color: white;
+  color: rgb(4, 4, 41);
+  font-weight: bold;
+}
+.header_btn:hover {
+  color: rgb(128, 20, 1);
+  background-color: rgb(248, 248, 146);
+}
+.quote {
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(248, 187, 176);
+  color: rgb(4, 4, 41);
+  border: 2px solid tomato;
+}
+
+.inProfile_container {
+  padding: 40px 0px 40px 0px;
+  text-align: center;
+  background-color: rgb(205, 205, 255);
+  color: rgb(4, 4, 41);
+}
+
+.verify {
+  font-weight: bold;
+  color: brown;
+  font-size: 20px;
+}
+
+.pu_container {
+  padding: 20px;
+  color: rgb(4, 4, 41);
+}
+
+.pu_input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.a_l {
+  text-align: left;
+  width: 200px;
+  margin: auto;
+}
+.a_l input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 2px solid rgb(4, 4, 41);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pu_btn_container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pu_btn {
+  margin-left: 0px;
+}
+.pu_image_container {
+  border-left: 1px solid rgb(4, 4, 41);
+}
+.pu_image_container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+  margin-top: 27px;
+  border-radius: 50%;
+  border: 2px solid rgb(4, 4, 41);
+}
+
+.add_one {
+  padding: 20px;
+  color: rgb(4, 4, 41);
+}
+
+.add_one_data {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: left;
+  width: 300px;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.add_one_data input {
+  padding: 5px;
+}
+.add_one_data select {
+  padding: 5px;
+}
+.add_one_btn {
+  width: 300px;
+  padding: 8px 10px 8px 10px;
+  background-color: rgb(4, 4, 41);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.shexp_container {
+  width: 500px;
+  margin: auto;
+  color: rgb(4, 4, 41);
+  margin-bottom: 30px;
+}
+tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 10px;
+  text-align: center;
+}
+.sh_btn {
+  padding: 5px 10px 5px 10px;
+  background-color: rgb(248, 187, 176);
+  border: 1px solid rgb(4, 4, 41);
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  color: rgb(4, 4, 41);
+}
+.edit {
+  background-color: rgb(224, 224, 250);
+}
+.premium {
+  background-color: rgb(205, 205, 255);
+  color: rgb(248, 47, 11);
+  font-size: 18px;
+}
+
+.pr_btn {
+  background-color: rgb(248, 248, 146);
+  margin: 0 5px 0 5px;
+  border-color: rgb(128, 20, 1);
+  color: rgb(128, 20, 1);
+}
+
+.pr_btn:hover {
+  background-color: rgb(248, 187, 176);
+}
+.user_name {
+  cursor: pointer;
+}
+
+/*------ Dark Theme -------------*/
+
+.body_dark {
+  background-color: black;
+}
+.signup_container_dark {
+  margin: auto;
+  margin-top: 75px;
+  width: 250px;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+.su_heading_dark {
+  color: white;
+  padding-bottom: 5px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid white;
+}
+
+.signup_container_dark input {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.signup_container_dark input:focus {
+  border-color: rgb(4, 4, 41);
+}
+
+.log_btn_dark {
+  padding: 5px 10px 5px 10px;
+  border-color: white;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: black;
+  cursor: pointer;
+}
+
+.forget_btn_drak {
+  border: 0px solid white;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.forget_div_dark {
+  padding-left: 20px;
+}
+
+.header_container_dark {
+  background-color: black;
+  color: white;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.header_name_dark {
+  display: flex;
+  justify-content: right;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.logo_dark {
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid white;
+  padding: 5px 10px 5px 10px;
+  width: 115px;
+}
+.header_btn_dark {
+  margin-left: 20px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(4, 4, 41);
+  cursor: pointer;
+  background-color: white;
+  color: rgb(4, 4, 41);
+  font-weight: bold;
+}
+.header_btn_dark:hover {
+  color: rgb(128, 20, 1);
+  background-color: rgb(248, 248, 146);
+}
+.quote_dark {
+  text-align: center;
+  padding: 10px;
+  background-color: black;
+  color: rgb(4, 4, 41);
+  border: 2px solid white;
+  color: rgb(248, 187, 176);
+}
+
+.inProfile_container_dark {
+  padding: 40px 0px 40px 0px;
+  text-align: center;
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.pu_container_dark {
+  padding: 20px;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pu_input_dark {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.a_l_dark {
+  text-align: left;
+  width: 200px;
+  margin: auto;
+}
+.a_l_dark input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+.pu_btn_container_dark {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pu_btn_dark {
+  margin-left: 0px;
+}
+.pu_image_container_dark {
+  border-left: 1px solid white;
+}
+.pu_image_container_dark img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+  margin-top: 27px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.add_one_dark {
+  padding: 20px;
+  color: white;
+}
+
+.add_one_data_dark {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: left;
+  width: 300px;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.add_one_data_dark input {
+  padding: 5px;
+}
+.add_one_data_dark select {
+  padding: 5px;
+}
+.add_one_btn_dark {
+  width: 300px;
+  padding: 8px 10px 8px 10px;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.shexp_container_dark {
+  width: 500px;
+  margin: auto;
+  color: white;
+  margin-bottom: 30px;
+}
+tr_dark {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 10px;
+  text-align: center;
+}
+.sh_btn_dark {
+  padding: 5px 10px 5px 10px;
+  background-color: rgb(248, 187, 176);
+  border: 1px solid rgb(4, 4, 41);
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  color: rgb(4, 4, 41);
+}
+.edit_dark {
+  background-color: rgb(224, 224, 250);
+}
+.premium_dark {
+  background-color: black;
+  color: rgb(205, 205, 255);
+  font-size: 18px;
+}
+
+.pr_btn_dark {
+  background-color: rgb(248, 248, 146);
+  margin: 0 5px 0 5px;
+  border-color: rgb(128, 20, 1);
+  color: rgb(128, 20, 1);
+}
+
+.pr_btn_dark:hover {
+  background-color: rgb(248, 187, 176);
+}
+.user_name_dark {
+  cursor: pointer;
+}
+
+.ex {
+  height: 75px;
+}
+
+th {
+  padding: 15px;
+}
+
+.none {
+  display: none;
 }

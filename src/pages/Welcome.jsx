@@ -12,7 +12,7 @@ const Welcome = () => {
   const handleVerifyMail = async () => {
     try {
       let response = await fetch(
-        "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyA0Q7-BgkEdY2M1RXH0W3uyrlRRqkrm5Gs",
+        "https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyDS47Ym6s-wDxJWygBn8N98Gf8q3_fi7_E",
         {
           method: "POST",
           body: JSON.stringify({

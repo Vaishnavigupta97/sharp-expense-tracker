@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect , useState} from "react";
 import { getAllExpense } from "./crud";
 import Expense from "./Expense";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,11 +10,18 @@ const ShowExpense = () => {
   const userId = useSelector((state) => state.auth.userId);
   const theme = useSelector((state) => state.theme.theme);
 
+  const [formData, setFormData] = useState([]);
+
+
   const dispatch = useDispatch();
 
-  const total = exp.reduce((t, e) => {
-    return t + +e.amount;
-  }, 0);
+  // const total = exp.reduce((t, e) => {
+  //   // return t + +e.amount;
+  //   return t+e
+  // }, 0);
+
+  const total = Array.isArray(exp) ? exp.reduce((t, e) => t + e.amount, 0) : 0;
+
 
   // CSV Generation --------------------------------
 
@@ -58,15 +65,35 @@ const ShowExpense = () => {
     document.body.removeChild(a);
   };
 
+  // useEffect(() => {
+  //   const fetchData = async (userId) => {
+  //     console.log(userId);
+  //     let data = await getAllExpense(userId);
+  //     dispatch(ExpenseActions.addExpense(data));
+  //   };
+  //   console.log("ShowExp_effect");
+  //   fetchData(userId);
+  // }, []);
+
   useEffect(() => {
     const fetchData = async (userId) => {
-      console.log(userId);
-      let data = await getAllExpense(userId);
-      dispatch(ExpenseActions.addExpense(data));
+      if (!userId) return;
+      try {
+        console.log(userId);
+        const data = await getAllExpense(userId);
+        if (Array.isArray(data)) {
+          dispatch(ExpenseActions.addExpense(data));
+          setFormData(data);
+        } else {
+          console.error("Fetched data is not an array:", data);
+        }
+      } catch (error) {
+        console.error("Error fetching expenses:", error);
+      }
     };
-    console.log("ShowExp_effect");
+
     fetchData(userId);
-  }, []);
+  }, [userId, dispatch]);
   return (
     <div>
       <div className={theme ? "quote premium" : "quote premium_dark"}>
@@ -90,7 +117,10 @@ const ShowExpense = () => {
               <th>Edit</th>
               <th>Delete</th>
             </tr>
-            {exp.map((e) => (
+            {/* {exp.map((e) => (
+              <Expense e={e} key={e.id} />
+            ))} */}
+             {Array.isArray(exp) && exp.map((e) => (
               <Expense e={e} key={e.id} />
             ))}
           </tbody>

@@ -8,7 +8,7 @@ const Header = () => {
   const [light, setLight] = useState(true);
 
   const dispatch = useDispatch();
-  const displayName = useSelector((state) => state.auth.name);
+  // const displayName = useSelector((state) => state.auth.name);
   const token = useSelector((state) => state.auth.token);
   const theme = useSelector((state) => state.theme.theme);
   const navigate = useNavigate();
@@ -43,7 +43,10 @@ const Header = () => {
           <div
             className={theme ? "user_name" : "user_name_dark"}
             onClick={handleProfile}
-          >{`Hello ${displayName} !`}</div>
+          >
+            {/* {`Hello ${displayName} !`} */}
+            {`Hello !`}
+          </div>
           <button
             className={theme ? "header_btn" : "header_btn_dark"}
             onClick={handleLogout}

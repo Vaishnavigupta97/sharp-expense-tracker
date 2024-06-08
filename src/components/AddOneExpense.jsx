@@ -24,7 +24,7 @@ const AddOneExpense = () => {
     setAmount("");
     setDes("");
     setCategory("");
-    //console.log(data);
+    console.log(data);
     dispatch(ExpenseActions.addExpense(data));
   };
 

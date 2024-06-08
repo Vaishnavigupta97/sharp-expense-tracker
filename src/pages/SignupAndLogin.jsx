@@ -24,7 +24,7 @@ const SignupAndLogin = () => {
       if (login) {
         try {
           let response = await fetch(
-            "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyA0Q7-BgkEdY2M1RXH0W3uyrlRRqkrm5Gs",
+            "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDS47Ym6s-wDxJWygBn8N98Gf8q3_fi7_E",
             {
               method: "POST",
               body: JSON.stringify({
@@ -65,7 +65,7 @@ const SignupAndLogin = () => {
           //console.log("Signup");
           try {
             let response = await fetch(
-              "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAam6zlCEcVQjbsT6Ih54ib0JoONOko2j8",
+              "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDS47Ym6s-wDxJWygBn8N98Gf8q3_fi7_E",
               {
                 method: "POST",
                 body: JSON.stringify({

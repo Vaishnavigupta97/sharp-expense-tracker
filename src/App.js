@@ -1,54 +1,45 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import ProfileForm from "./pages/ProfileForm";
-import ForgetPassword from "./pages/ForgetPassword";
-import store from "./store/store";
-import { useSelector } from "react-redux";
-import SignupAndLogin from "./pages/SignupAndLogin";
-import Header from "./components/Header";
-import IncompleteProfile from "./components/IncompleteProfile";
-import AddOneExpense from "./components/AddOneExpense";
-import ShowExpense from "./components/ShowExpense";
-import EmailVerification from "./components/EmailVerification";
+import React, { Fragment } from "react";
+
+// import SignUpFormPrint from "./components/Signup/SignUpFormPrint";
+import Login from "./components/Login/Login";
+import EditForm from "./components/expense/editExpense/editForm";
+
+import { Switch, Route } from "react-router-dom";
+import Welcome from "./components/welcome/Welcome";
+import Profile from "./components/profile/Profile";
+import ForgotPassword from "./components/forgetPassword/ForgotPassword";
+import SignUpForm from "./components/Signup/SignUp";
+// import { useEffect } from "react";
+// import { toast } from "react-toastify";
+// import { useContext } from "react";
+// import ExpenseContext from "./store/ExpenseContext";
+// import { useState } from "react";
 
 function App() {
-  const token = useSelector((state) => state.auth.token);
-  const name = useSelector((state) => state.auth.name);
-  const theme = useSelector((state) => state.theme.theme);
-
   return (
-    // <div className={theme ? "body" : "body_dark"}>
-    <div>
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            token ? (
-              name ? (
-                <AddOneExpense />
-              ) : (
-                <>
-                  <IncompleteProfile />
-                  <AddOneExpense />
-                </>
-              )
-            ) : (
-              <SignupAndLogin />
-            )
-          }
-        />
-        <Route
-          path="/profileForm"
-          element={token ? <ProfileForm /> : <SignupAndLogin />}
-        />
-        <Route path="/forget" element={<ForgetPassword />} />
-      </Routes>
-      {token && <ShowExpense />}
-      {token && <EmailVerification />}
-      <div className="none">Learn React</div>
-    </div>
+    <>
+      <Switch>
+        <Route path="/edit">
+          <EditForm></EditForm>
+        </Route>
+        <Route path="/auth">
+          <Login></Login>
+        </Route>
+        <Route path="/welcome">
+          <Welcome></Welcome>
+        </Route>
+        <Route path="/profile">
+          <Profile></Profile>
+        </Route>
+        <Route path="/forgotPassword">
+          <ForgotPassword></ForgotPassword>
+        </Route>
+        <Route path="/">
+          <SignUpForm></SignUpForm>
+        </Route>
+      </Switch>
+    </>
   );
 }
 
-export default App;
+export default App

@@ -1,0 +1,67 @@
+.container {
+  height: 100%;
+  background-color: rgb(169, 169, 55);
+  display: flex;
+  flex-direction: column;
+}
+.containerblack {
+  height: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  background-color: crimson;
+}
+.title {
+  color: antiquewhite;
+}
+.profilemsg > p {
+  background-color: antiquewhite;
+  border-radius: 15px;
+  padding: 5px;
+  color: brown;
+}
+
+.formcontrol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.navigation {
+  display: flex;
+  flex-direction: column;
+}
+.navigation > button {
+  background-color: chocolate;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  font-weight: bold;
+}
+.link {
+  margin-left: 5px;
+ 
+  font-size: large;
+}
+.border {
+  width: 100%;
+
+  border: 1px solid dimgray;
+}
+@media (max-width: 900px) {
+  .welcome {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 525px) {
+  .navigation > button {
+    margin: 10px 5px 10px 5px;
+    padding: 5px;
+  }
+}

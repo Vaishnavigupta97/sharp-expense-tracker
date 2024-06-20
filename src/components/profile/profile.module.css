@@ -1,0 +1,36 @@
+.container{
+    display:flex;
+    height:100vh;
+    /* background-color: mediumorchid; */
+    justify-content: center;
+    align-items: center;
+    background-image: url(./profile.jpg);
+}
+
+.main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    width: 400px;
+    background-color: beige;
+}
+
+.form{
+    display:flex;
+    flex-direction: column;
+    width:300px;
+    justify-content: center;
+    align-items: center;
+}
+.form>input{
+    margin:20px
+}
+.Link{
+    margin:10px
+}
+@media(max-width:576px){
+    .main{
+        width:300px
+    }
+}

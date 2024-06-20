@@ -1,0 +1,54 @@
+.editfrompopup {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  height: 320px;
+  width: 400px;
+  background-color: darksalmon;
+  z-index: 1;
+}
+.closebtn {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 30px;
+}
+.closebtn > button {
+  background-color: black;
+  color: white;
+  font-weight: 500;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form > input,
+.form > select {
+  margin: 10px;
+  height: 35px;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.button > button {
+  height: 30px;
+  border-radius: 10px;
+  background-color: olive;
+  color: whitesmoke;
+  font-weight: 700;
+}
+
+@media (max-width: 576px) {
+  .editfrompopup {
+    width: 250px;
+  }
+}

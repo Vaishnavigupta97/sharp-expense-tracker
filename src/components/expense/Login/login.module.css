@@ -1,0 +1,66 @@
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.loginpage {
+  display: flex;
+  /* background-color: brown; */
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image:url("../../../public/signup.jpg");
+  background-size: cover;
+}
+.contentbox {
+  /* background-color:yellow; */
+  height: 300px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  margin:5px;
+}
+.contentbox > p {
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form > input {
+  background-color: black;
+  height: 40px;
+  width: 200px;
+  border-radius: 25px;
+  margin: 10px;
+  color:white;
+  font-size: smaller;
+}
+.button {
+  height: 40px;
+  width: 200px;
+  border-radius: 25px;
+  margin: 20px;
+  background-color: rgb(13, 167, 228);
+  color: white;
+  font-weight: 700;
+}
+/* .signupbtn{
+    width:300px
+} */
+.signupbtn>button{
+    width:300px;
+    margin:20px;
+    height:40px;
+    background-color: rgba(180, 236, 238, 0.892);
+    font-size: 15px;
+    border-radius: 5px;
+}
+.signupbtn>button>a{
+  text-decoration: none;
+}

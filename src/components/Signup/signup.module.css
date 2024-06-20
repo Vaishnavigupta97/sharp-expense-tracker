@@ -1,0 +1,55 @@
+div {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .signuppage {
+    display: flex;
+    /* background-color: brown; */
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image:url("../../../public/signin.jpg");
+    background-size: cover;
+  }
+  .contentbox {
+    /* background-color:yellow; */
+    height: 400px;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    margin:5px;
+  }
+  .contentbox > p {
+    font-weight: 800;
+    font-size: 1.25rem;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form > input {
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    margin-top: 10px;
+    color:rgb(9, 9, 9);
+    font-size: smaller;
+  }
+  .button {
+    height: 40px;
+    width: 200px;
+    border-radius: 25px;
+    margin: 20px;
+    background-color: rgb(13, 167, 228);
+    color: white;
+    font-weight: 700;
+  }
+
+  
